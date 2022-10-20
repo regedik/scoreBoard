@@ -1,35 +1,52 @@
 <html>
     <head>
-        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="index.css">       
     </head>
     <body>
         <div class="container">
             <div id="home_wnd">
-                <h3>HOME</h3>
+                <h3 id="home_title">HOME</h3>
                 <div id='home_score'>
                     0
                 </div>
-                <button id="home_plus1_btn" type="button" class="btn" onclick="homePlus1Score()">+1</button>
-                <button id="home_plus2_btn" type="button" class="btn" onclick="homePlus2Score()">+2</button>
-                <button id="home_plus3_btn" type="button" class="btn" onclick="homePlus3Score()">+3</button>
+                <br/>
+                <button id="home_plus1_btn" type="button" class="btn" onclick="homePlus1Score()">
+                    +1
+                </button>
+                <button id="home_plus2_btn" type="button" class="btn" onclick="homePlus2Score()">
+                    +2
+                </button>
+                <button id="home_plus3_btn" type="button" class="btn" onclick="homePlus3Score()">
+                    +3
+                </button>
+            </div>
+            <div id="time_wnd">
+                <h3 id="time_title">TIME</h3>
+                <div id="time" class="time">
+                    0
+                </div>
+                <br/>
+                <button id="newgame_btn" type="button" class="btn" onclick="newgame()">
+                    New Game
+                </button>
             </div>
             <div id="guest_wnd">
-                <h3>GUEST</h3>
+                <h3 id="guest_title">GUEST</h3>
                 <div id='guest_score'>
                     0
                 </div>
-                <button id="guest_plus1_btn" type="button" class="btn" onclick="guestPlus1Score()">+1</button>
-                <button id="guest_plus2_btn" type="button" class="btn" onclick="guestPlus2Score()">+2</button>
-                <button id="guest_plus3_btn" type="button" class="btn" onclick="guestPlus3Score()">+3</button>
+                <br/>
+                <button id="guest_plus1_btn" type="button" class="btn" onclick="guestPlus1Score()">
+                    +1
+                </button>
+                <button id="guest_plus2_btn" type="button" class="btn" onclick="guestPlus2Score()">     +2
+                </button>
+                <button id="guest_plus3_btn" type="button" class="btn" onclick="guestPlus3Score()">
+                    +3
+                </button>
             </div>
         </div>
-        <div class="futter">
-            <div id="time" class="time">
-                Time: 0
-            </div>
-            <button id="newgame_btn" type="button" class="btn" onclick="newgame()">New Game</button>
-        </div>
-    
+        
         <script src="index.js"></script>
     </body>
 </html>

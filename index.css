@@ -7,16 +7,62 @@ div h3 {
     color: white;
 }
 
+@font-face {
+  font-family: CursedTimerUlil;
+  src: url(CursedTimerUlil-Aznm.ttf);
+}
+
+
+
+#home_wnd {
+    text-align: center;
+}
+
+#guest_wnd {
+    text-align: center;
+}
+
+#time_wnd {
+    text-align: center;
+}
+
 #home_score {
-    color: yellow;  
+    font-family: CursedTimerUlil;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 90px;
+    line-height: 127px;
+    text-align: center;
+    color: #F94F6D;
+    
+    background-color: black;
+    border-radius: 6px;
 }
 
 #guest_score {
-    color: yellow;  
+    font-family: CursedTimerUlil;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 90px;
+    line-height: 127px;
+    text-align: center;
+    color: #F94F6D;
+    
+    background-color: black;
+    border-radius: 6px;
 }
 
 .time {
-    color: yellow;    
+    font-family: CursedTimerUlil;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 90px;
+    line-height: 127px;
+    text-align: center;
+    color: #F94F6D;    
+    
+    background-color: black;
+    border-radius: 6px;
 }
 
 .btn {
@@ -24,20 +70,26 @@ div h3 {
     background: #5c00b1;
     color: white;
     border-radius: 3px;
+    font-family: CursedTimerUlil;
+    cursor: pointer;
 }
 .container {
     display: flex;
     justify-content: space-around;
 }
 
-.futter {
-    padding: 20px;
-}
-
 .win {
-    background: green;
+    color: greenyellow;
 }
 
 .lost {
-    background: red;
+    color: red;
+}
+
+.draw {
+    color: yellow;
+}
+
+#newgame_btn {
+        padding: 10px;
 }

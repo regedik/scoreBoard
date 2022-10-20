@@ -1,15 +1,16 @@
 let homeScore = 0;
 let guestScore = 0;
 
-console.log(homeScore);
-console.log(guestScore);
-
 let homeScoreComp = document.getElementById('home_score');
 let guestScoreComp = document.getElementById('guest_score');
 let timeComp = document.getElementById('time');
 
 let homeWindow = document.getElementById('home_wnd');
 let guestWindow = document.getElementById('guest_wnd');
+
+let homeTitle = document.getElementById('home_title');
+//let timeTitle = document.getElementById('time_title');
+let guestTitle = document.getElementById('guest_title');
 
 let homePlus1Btn = document.getElementById('home_plus1_btn');
 let homePlus2Btn = document.getElementById('home_plus2_btn');
@@ -18,13 +19,9 @@ let guestPlus1Btn = document.getElementById('guest_plus1_btn');
 let guestPlus2Btn = document.getElementById('guest_plus2_btn');
 let guestPlus3Btn = document.getElementById('guest_plus3_btn');
 
-console.log(homePlus1Btn);
-console.log(guestPlus1Btn);
-
 const gameTimeMax = 10;
 let gameTime = gameTimeMax;
-timeComp.textContent = 'Time: ' + gameTime;
-setTimer();
+timeComp.textContent = gameTime;
 
 function setTimer() {
     setTimeout(() => {
@@ -34,7 +31,7 @@ function setTimer() {
 
 function timerHandler() {
     gameTime--;
-    timeComp.textContent = 'Time: ' + gameTime;
+    timeComp.textContent = gameTime;
     
     if(gameTime > 0) {
         setTimer();
@@ -48,15 +45,16 @@ function timerHandler() {
         guestPlus3Btn.disabled = true;
         
         if(homeScore > guestScore) {
-            homeWindow.classList.add("win");
-            guestWindow.classList.add("lost");
+            homeTitle.classList.add("win");
+            guestTitle.classList.add("lost");
         }
         else if(homeScore < guestScore) {
-            homeWindow.classList.add("lost");
-            guestWindow.classList.add("win");
+            homeTitle.classList.add("lost");
+            guestTitle.classList.add("win");
         }
         else {
-            alert('In a draw!');
+            homeTitle.classList.add("draw");
+            guestTitle.classList.add("draw");
         }
     }
 }
@@ -103,10 +101,12 @@ function newgame() {
     guestScore = 0;
     updateScores()
     
-    homeWindow.classList.remove("win");
-            homeWindow.classList.remove("lost");
-            guestWindow.classList.remove("win");
-            guestWindow.classList.remove("lost");
+    homeTitle.classList.remove("win");
+            homeTitle.classList.remove("lost");
+            homeTitle.classList.remove("draw");
+            guestTitle.classList.remove("win");
+            guestTitle.classList.remove("lost");
+            guestTitle.classList.remove("draw");
     
     homePlus1Btn.disabled = false;
         homePlus2Btn.disabled = false;
@@ -115,6 +115,6 @@ function newgame() {
         guestPlus2Btn.disabled = false;
         guestPlus3Btn.disabled = false;
         
-        timeComp.textContent = 'Time: ' + gameTime;
+        timeComp.textContent = gameTime;
     setTimer();
 }
