@@ -6,3 +6,15 @@ body {
     display: flex;
     justify-content: space-around;
 }
+
+.futter {
+    padding: 20px;
+}
+
+.win {
+    background: green;
+}
+
+.lost {
+    background: red;
+}
